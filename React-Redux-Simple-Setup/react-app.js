@@ -35,3 +35,28 @@ class DisplayMessages extends React.Component {
       );
     }
   };
+/* 
+React Redux provides its react-redux package to help accomplish these tasks.
+
+React Redux provides a small API with two key features: Provider and connect. Another challenge covers connect. The Provider is a wrapper component from React Redux that wraps your React app. This wrapper then allows you to access the Redux store and dispatch functions throughout your component tree. Provider takes two props, the Redux store and the child components of your app. Defining the Provider for an App component might look like this:
+
+<Provider store={store}>
+  <App/>
+</Provider> 
+
+*/
+const Provider = ReactRedux.Provider;
+
+class AppWrapper extends React.Component {
+  // render the Provider here
+ render() {
+    return (
+
+        <Provider store = {store}>
+          <DisplayMessages />
+        </Provider>
+
+    )
+  }
+  // change code above this line
+};
