@@ -102,7 +102,7 @@ class AppWrapper extends React.Component {
     render() {
         return (
             <Provider store={store}>
-                <DisplayMessages />
+                <Presentational />
             </Provider>
         )
     }
